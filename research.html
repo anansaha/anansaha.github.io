@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description"
-        content="Research interests, preprints, and working papers by Anan Saha.">
+        content="Anan Saha's research in SDE inference, reinforcement learning and bandits, and Gaussian mixture models and video denoising.">
+
   <title>Research | Anan Saha</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -19,8 +23,14 @@
       line-height: 1.4;
     }
 
-    a { color: #224b8d; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: #224b8d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     a:focus-visible,
     main:focus-visible {
@@ -39,7 +49,9 @@
       transform: translateY(-150%);
     }
 
-    .skip-link:focus { transform: translateY(0); }
+    .skip-link:focus {
+      transform: translateY(0);
+    }
 
     .site-layout {
       display: grid;
@@ -48,7 +60,7 @@
       margin: 2px;
     }
 
-    .sidebar {
+    .site-sidebar {
       padding: 22px 8px 16px;
       background: #f6f6f6;
       border: 1px solid #ddd;
@@ -62,23 +74,23 @@
       line-height: 1.25;
     }
 
-    .sidebar ul {
+    .site-sidebar ul {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .sidebar a {
+    .site-sidebar a {
       display: block;
       padding: 1px 8px;
     }
 
-    .sidebar a[aria-current="page"] {
+    .site-sidebar a[aria-current="page"] {
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    main {
+    .site-content {
       min-width: 0;
       padding: 8px 16px 10px 0;
       overflow-wrap: break-word;
@@ -107,26 +119,47 @@
     }
 
     h3 {
-      margin: 20px 0 10px;
+      margin: 0 0 12px;
       color: #224b8d;
-      font-size: 17px;
+      font-size: 20px;
     }
 
-    p { margin: 0 0 14px; }
+    h4 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .topic-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin: 18px 0 24px;
+    }
+
+    .research-theme {
+      margin-top: 32px;
+      scroll-margin-top: 16px;
+    }
 
     .paper-list {
       margin: 0;
-      padding-left: 28px;
+      padding-left: 24px;
     }
 
     .paper-list li {
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       padding-left: 2px;
     }
 
-    .paper-title { font-weight: bold; }
+    .paper-status {
+      color: #555;
+    }
 
-    footer {
+    .site-footer {
       margin-top: 48px;
       padding-top: 4px;
       border-top: 1px solid #c0c0c0;
@@ -135,38 +168,77 @@
     }
 
     @media (max-width: 640px) {
-      .site-layout { display: block; margin: 0; }
+      .site-layout {
+        display: block;
+        margin: 0;
+      }
 
-      .sidebar {
+      .site-sidebar {
         padding: 10px 12px;
         border-width: 0 0 1px;
       }
 
-      .menu-title { margin-bottom: 4px; border: 0; }
+      .menu-title {
+        margin-bottom: 4px;
+        border: 0;
+      }
 
-      .sidebar ul {
+      .site-sidebar ul {
         display: flex;
         flex-wrap: wrap;
         gap: 0 4px;
       }
 
-      .sidebar a {
+      .site-sidebar a {
         display: flex;
         align-items: center;
         min-height: 44px;
         padding: 8px;
       }
 
-      main { padding: 20px 16px; }
-      h1 { font-size: 28px; }
-      .page-header { margin-bottom: 20px; }
+      .site-content {
+        padding: 20px 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .page-header {
+        margin-bottom: 20px;
+      }
+
+      .topic-nav {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
 
     @media print {
-      .sidebar, .skip-link { display: none; }
-      .site-layout { display: block; margin: 0; }
-      main { padding: 0; }
-      .paper-list li { break-inside: avoid; }
+      .site-sidebar,
+      .skip-link,
+      .topic-nav {
+        display: none;
+      }
+
+      .site-layout {
+        display: block;
+        margin: 0;
+      }
+
+      .site-content {
+        padding: 0;
+      }
+
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+      }
+
+      .paper-list li {
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -175,22 +247,28 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <div class="site-layout">
-    <aside class="sidebar">
+
+    <aside class="site-sidebar">
       <nav aria-label="Main navigation">
         <p class="menu-title">Menu</p>
 
         <ul>
           <li><a href="index.html">Home</a></li>
+
           <li>
-            <a href="research.html" aria-current="page">Research</a>
+            <a href="research.html" aria-current="page">
+              Research
+            </a>
           </li>
+
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main id="main-content" tabindex="-1">
+    <main class="site-content" id="main-content" tabindex="-1">
+
       <header class="page-header">
         <h1>Research</h1>
       </header>
@@ -199,57 +277,163 @@
         <h2 id="interests-heading">Research Interests</h2>
 
         <p>
-          My research lies at the intersection of stochastic processes,
-          statistical inference, and machine learning. I am particularly
-          interested in inference for stochastic differential equations,
-          distribution learning and mixture models, and Bayesian and
-          distributional reinforcement learning, with an emphasis on
-          uncertainty quantification and probabilistic modeling.
+          My research lies at the intersection of probability,
+          statistical inference, and machine learning. I am interested
+          in developing mathematical and computational methods for
+          learning stochastic systems, making decisions under
+          uncertainty, and recovering structure from noisy data.
         </p>
+
+        <nav class="topic-nav" aria-label="Research topics">
+          <a href="#sde-inference">SDE Inference</a>
+          <a href="#rl-bandits">RL and Bandits</a>
+          <a href="#gmm-video">GMMs and Video Denoising</a>
+        </nav>
+
+        <!-- RESEARCH AREA 1 -->
+
+        <section class="research-theme"
+                 id="sde-inference"
+                 aria-labelledby="sde-heading">
+
+          <h3 id="sde-heading">
+            Inference for Stochastic Differential Equations
+          </h3>
+
+          <p>
+            I am interested in learning stochastic dynamics from
+            observed data, particularly when a system involves multiple
+            time scales or unobserved components. My research combines
+            stochastic differential equations (SDEs), statistical
+            inference, and flexible probabilistic models to learn
+            effective dynamics and quantify uncertainty.
+          </p>
+
+          <p>
+            In my work on multiscale stochastic models, I use stochastic
+            averaging and normalizing flows to learn reduced dynamics
+            from an observed trajectory. I am also interested in
+            Bayesian methods for inference in SDEs with unknown
+            drift structure.
+          </p>
+
+          <h4>Related paper</h4>
+
+          <ul class="paper-list">
+            <li>
+              <strong>
+                Learning stochastic multiscale models through
+                normalizing flows.
+              </strong><br>
+
+              Anan Saha and Arnab Ganguly.<br>
+
+              <span class="paper-status">
+                Preprint, 2026. Submitted, under review.
+              </span>
+
+              <a href="https://arxiv.org/abs/2605.09718"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                [arXiv]
+              </a>
+            </li>
+          </ul>
+
+          <h4>Work in progress</h4>
+
+          <ul class="paper-list">
+            <li>
+              <strong>
+                Neural Reversible-Jump MCMC for Integral-Drift
+                Stochastic Differential Equations.
+              </strong><br>
+
+              <em class="paper-status">
+                Manuscript in preparation.
+              </em>
+            </li>
+          </ul>
+        </section>
+
+        <!-- RESEARCH AREA 2 -->
+
+        <section class="research-theme"
+                 id="rl-bandits"
+                 aria-labelledby="rl-heading">
+
+          <h3 id="rl-heading">
+            Reinforcement Learning and Bandits
+          </h3>
+
+          <p>
+            I am interested in sequential decision-making under
+            uncertainty, with a focus on reinforcement learning (RL)
+            and contextual bandits. My interests include Bayesian and
+            distributional approaches that model reward distributions
+            and quantify uncertainty in the learning process.
+          </p>
+
+          <p>
+            A particular focus is offline learning, where decisions
+            must be learned from previously collected data. I am
+            interested in how uncertainty about outcomes and
+            sensitivity to risk can be incorporated into policy
+            learning and evaluation.
+          </p>
+
+          <h4>Work in progress</h4>
+
+          <ul class="paper-list">
+            <li>
+              <strong>
+                Beyond the Mean: Bayesian Distributional Learning
+                for Risk-Sensitive Offline Contextual Bandits
+              </strong><br>
+
+              <em class="paper-status">
+                Manuscript in preparation.
+              </em>
+            </li>
+          </ul>
+        </section>
+
+        <!-- RESEARCH AREA 3 -->
+
+        <section class="research-theme"
+                 id="gmm-video"
+                 aria-labelledby="gmm-heading">
+
+          <h3 id="gmm-heading">
+            Gaussian Mixture Models and Video Denoising
+          </h3>
+
+          <p>
+            I am interested in Gaussian mixture models (GMMs) as
+            flexible probabilistic representations of complex data,
+            and in their use for video denoising. This direction
+            connects distribution learning with the recovery of
+            clean signals from noisy observations.
+          </p>
+
+          <p>
+            My interests include learning mixture structure from
+            noisy data and using it to guide reconstruction. In video
+            denoising, I am interested in methods that preserve
+            spatial detail and consistency across frames while
+            accounting for uncertainty in the observations.
+          </p>
+
+          <!-- Add related papers here as they become available. -->
+
+        </section>
       </section>
 
-      <section aria-labelledby="publications-heading">
-        <h2 id="publications-heading">Publications and Preprints</h2>
-
-        <h3>Preprints and Submitted Papers</h3>
-
-        <ol class="paper-list">
-          <li>
-            <a class="paper-title"
-               href="https://arxiv.org/abs/2605.09718"
-               target="_blank"
-               rel="noopener noreferrer">
-              Learning multiscale stochastic models through normalizing flows.
-            </a><br>
-            Anan Saha and Arnab Ganguly.<br>
-            <em>Submitted, under review.</em> arXiv:2605.09718
-          </li>
-        </ol>
-
-        <h3>Working Papers</h3>
-
-        <ol class="paper-list">
-          <li>
-            <strong>
-              Neural Reversible-Jump MCMC for Integral-Drift
-              Stochastic Differential Equations.
-            </strong><br>
-            <em>Manuscript in preparation.</em>
-          </li>
-
-          <li>
-            <strong>
-              Beyond the Mean: Bayesian Distributional Learning
-              for Risk-Sensitive Offline Contextual Bandits
-            </strong><br>
-            <em>Manuscript in preparation.</em>
-          </li>
-        </ol>
-      </section>
-
-      <footer>
-        Last updated: <time datetime="2026-10">October 2026</time>
+      <footer class="site-footer">
+        Last updated:
+        <time datetime="2026-10">October 2026</time>
       </footer>
+
     </main>
   </div>
 </body>
