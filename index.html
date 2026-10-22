@@ -1,163 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Anan Saha, PhD student in mathematics at Louisiana State University. Research in statistical inference, stochastic differential equations, and probabilistic modeling.">
   <title>Anan Saha</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 30px 22px;
-      background: white;
-      min-height: 100vh;
-    }
-
-    header {
-      border-bottom: 2px solid #e5e5e5;
-      padding-bottom: 20px;
-      margin-bottom: 35px;
-    }
-
-
-
-    .subtitle {
-      font-size: 18px;
-      margin: 0;
-      color: #444;
-    }
-
-    nav {
-      margin-top: 22px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #3b2f8f;
-      font-weight: bold;
-      margin-right: 22px;
-      font-size: 17px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 34px;
-    }
-
-    h1 {
-  font-size: 42px;
-  margin: 0 0 8px 0;
-  font-weight: bold;
-  color: #461D7C;
-}
-
-    h2 {
-      font-size: 30px;
-      color: #461D7C;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-      margin-bottom: 18px;
-      
-    }
-
-    h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-      color: #3b2f8f;
-    }
-
-    p {
-      font-size: 18px;
-      max-width: 850px;
-    }
-
-    .contact {
-      margin-top: 35px;
-    }
-
-    .contact a {
-      color: #3b2f8f;
-      font-weight: bold;
-    }
-
-    footer {
-      margin-top: 50px;
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin-bottom: 8px;
-      }
-
-      p {
-        font-size: 17px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="container">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header>
-      <h1>Anan Saha</h1>
-      <p class="subtitle">
-        PhD Student, Department of Mathematics, Louisiana State University
-      </p>
-
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
+  <div class="site-layout">
+    <aside class="site-sidebar">
+      <nav aria-label="Main navigation">
+        <p class="menu-title">Menu</p>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-    </header>
+    </aside>
 
-    <section>
-      <h2>About</h2>
+    <main class="site-content" id="main-content" tabindex="-1">
+      <header class="page-header">
+        <h1>Anan Saha</h1>
+      </header>
 
-      <p>
-        I am a third year PhD student in mathematics at Louisiana State University under the supervision of Prof. Arnab Ganguly.
-        My research interests lie in statistical inference, stochastic differential equations, and probabilistic modeling. I am particularly interested in developing mathematical and computational methods for multiscale stochastic systems, Bayesian learning, Gaussian mixture models, and reinforcement learning.
+      <!-- To add a portrait, save your photo as profile.jpg in this folder
+           and uncomment the following line:
+      <img class="profile-photo" src="profile.jpg" alt="Anan Saha" width="384">
+      -->
+
+      <p class="affiliation">
+        PhD Student, Department of Mathematics<br>
+        Louisiana State University
       </p>
 
-     <p> My academic journey began at Ramakrishna Mission Vidyamandira, followed by a master’s degree from Indian Institute of Technology Tirupati.
-</p>
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
+      <p>
+        I am a third year PhD student in mathematics at Louisiana State University
+        under the supervision of Prof. Arnab Ganguly.
+      </p>
 
       <p>
-        Email:
-        <a href="mailto:asaha9@lsu.edu">asaha9@lsu.edu</a>
+        My research interests lie in statistical inference, stochastic differential
+        equations, and probabilistic modeling. I am particularly interested in
+        developing mathematical and computational methods for multiscale stochastic
+        systems, Bayesian learning, Gaussian mixture models, and reinforcement learning.
       </p>
-    </section>
 
-    <footer>
-      Last updated: May 2026
-    </footer>
+      <p>
+        My academic journey began at Ramakrishna Mission Vidyamandira, followed by
+        a master’s degree from Indian Institute of Technology Tirupati.
+      </p>
 
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>Email: <a href="mailto:asaha9@lsu.edu">asaha9@lsu.edu</a></p>
+      </section>
+
+      <footer class="site-footer">
+        Last updated: <time datetime="2026-10">October 2026</time>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
